@@ -1,0 +1,259 @@
+// Gallery Component
+.gecko-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: $spacing-xs;
+    margin-top: $spacing-md;
+
+    @media (max-width: $breakpoint-md) {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: $spacing-xxs;
+    }
+}
+
+.gallery-item {
+    cursor: pointer;
+    position: relative;
+    padding-top: 100%; // Square aspect ratio
+    background: $bg-card;
+    border: 2px solid transparent;
+    border-radius: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.gallery-image,
+.gallery-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-placeholder {
+    background: $bg-card;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .placeholder-icon {
+        font-size: 3rem;
+        opacity: 0.5;
+    }
+}
+
+// Viewer Modal
+.gecko-viewer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.viewer-content {
+    width: 90%;
+    max-width: 1200px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    animation: scaleIn 0.3s ease;
+}
+
+.viewer-main-image {
+    position: relative;
+    background: $bg-card;
+    width: 100%;
+    aspect-ratio: 4/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background: $bg-card;
+    }
+
+    .viewer-placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $bg-card;
+
+        .placeholder-icon-large {
+            font-size: 8rem;
+            opacity: 0.3;
+        }
+    }
+}
+
+.viewer-close {
+    position: absolute;
+    top: $spacing-md;
+    left: $spacing-md;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: $border-radius;
+    color: white;
+    font-size: $font-lg;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $transition-fast;
+    z-index: 10001;
+    backdrop-filter: blur(4px);
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.95);
+        border-color: $accent-orange;
+        transform: rotate(90deg);
+    }
+}
+
+.viewer-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: $border-radius-full;
+    color: white;
+    font-size: $font-lg;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $transition-fast;
+    z-index: 10001;
+    backdrop-filter: blur(4px);
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.9);
+        border-color: $accent-orange;
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    &.viewer-prev {
+        left: $spacing-md;
+    }
+
+    &.viewer-next {
+        right: $spacing-md;
+    }
+}
+
+.viewer-logo {
+    position: absolute;
+    top: $spacing-md;
+    right: $spacing-md;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 16px;
+    border-radius: $border-radius;
+    z-index: 10001;
+    backdrop-filter: blur(4px);
+
+    .logo-icon {
+        font-size: 1.5rem;
+    }
+
+    .logo-text {
+        font-size: $font-sm;
+        font-weight: $font-weight-bold;
+        color: white;
+        letter-spacing: 2px;
+    }
+}
+
+.viewer-info {
+    background: #000000;
+    padding: $spacing-md;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+}
+
+.info-handle {
+    font-weight: $font-weight-semibold;
+    font-size: $font-md;
+}
+
+.info-date {
+    font-size: $font-sm;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.info-description {
+    font-size: $font-md;
+    line-height: 1.4;
+}
+
+.info-tags {
+    font-size: $font-sm;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: $breakpoint-md) {
+    .viewer-content {
+        width: 95%;
+        max-height: 95vh;
+    }
+
+    .viewer-nav {
+        width: 40px;
+        height: 40px;
+        font-size: $font-md;
+
+        &.viewer-prev {
+            left: $spacing-xs;
+        }
+
+        &.viewer-next {
+            right: $spacing-xs;
+        }
+    }
+
+    .viewer-close {
+        width: 40px;
+        height: 40px;
+        top: $spacing-xs;
+        left: $spacing-xs;
+    }
+
+    .viewer-logo {
+        top: $spacing-xs;
+        right: $spacing-xs;
+        padding: 6px 12px;
+
+        .logo-text {
+            font-size: $font-xs;
+        }
+    }
+}
+

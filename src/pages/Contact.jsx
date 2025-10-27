@@ -1,116 +1,47 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useLanguage } from '../context/LanguageContext'
 
 function Contact() {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-    });
-
-    const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle form submission here
-        console.log('Form submitted:', formData);
-        alert('Thank you for your message! We will get back to you soon.');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-    };
+    const { t } = useLanguage()
 
     return (
         <div className="page-contact">
-            <div className="container">
-                <h1 className="page-title">Contact Us</h1>
-                <p className="page-subtitle">Have questions about our geckos, your order, or anything else? We're here to help!</p>
+            <div className="container contact-container">
+                <h1 className="contact-title">Contact Info</h1>
+
+                <div className="warning-message">
+                    Please check your spam folder if you don't see a response within a day.
+                </div>
 
                 <div className="contact-content">
-                    <div className="contact-info-card">
-                        <h2>Get in Touch</h2>
+                    <p>
+                        Due to the heavy email volume, I cannot answer very basic husbandry, "what morph", and breeding questions from the general public anymore. I have provided many resources on my website, along with Google and YouTube having endless information available. There are also many Facebook groups to ask your question publicly. If you have thoroughly researched a question and cannot find an answer anywhere else then I can help.
+                    </p>
+                    <p>
+                        Thanks for your understanding!
+                    </p>
+                    <p>
+                        We are based out of Idaho and do not have a public storefront.
+                    </p>
+                </div>
 
-                        <div className="info-section">
-                            <h3>📧 Email</h3>
-                            <p><a href="mailto:info@geckoshop.com">info@geckoshop.com</a></p>
+                <div className="gecko-eating-section">
+                    <p>
+                        If your gecko is not eating please see this page first:
+                    </p>
+                    <a href="/gecko-not-eating" className="gecko-eating-link">
+                        Gecko Not Eating Page
+                    </a>
+                </div>
 
-                            <h3>📞 Phone</h3>
-                            <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
-
-                            <h3>📍 Address</h3>
-                            <p>Gecko Shop Headquarters<br />
-                                123 Reptile Lane<br />
-                                Vivarium City, GC 98765</p>
-
-                            <h3>🕒 Business Hours</h3>
-                            <p>Monday - Friday: 9am - 6pm<br />
-                                Saturday: 10am - 4pm<br />
-                                Sunday: Closed</p>
-                        </div>
-                    </div>
-
-                    <div className="contact-form-card">
-                        <h2>Send us a Message</h2>
-                        <form onSubmit={handleSubmit} className="contact-form">
-                            <div className="form-group">
-                                <label htmlFor="name">Name:</label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    required
-                                    value={formData.name}
-                                    onChange={handleChange}
-                                    placeholder="Your name"
-                                />
-                            </div>
-
-                            <div className="form-group">
-                                <label htmlFor="email">Email:</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    required
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    placeholder="your.email@example.com"
-                                />
-                            </div>
-
-                            <div className="form-group">
-                                <label htmlFor="subject">Subject:</label>
-                                <input
-                                    type="text"
-                                    id="subject"
-                                    name="subject"
-                                    value={formData.subject}
-                                    onChange={handleChange}
-                                    placeholder="What's this about?"
-                                />
-                            </div>
-
-                            <div className="form-group">
-                                <label htmlFor="message">Message:</label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    rows="6"
-                                    required
-                                    value={formData.message}
-                                    onChange={handleChange}
-                                    placeholder="Your message here..."
-                                ></textarea>
-                            </div>
-
-                            <button type="submit" className="submit-btn">
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
+                <div className="contact-email-section">
+                    <p className="email-label">Contact Email:</p>
+                    <a href="mailto:info@papa-pharm-armenia.com" className="email-link">
+                        info@papa-pharm-armenia.com
+                    </a>
+                    <p className="email-note">
+                        Please check your spam folder for my reply.
+                    </p>
                 </div>
             </div>
         </div>

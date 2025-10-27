@@ -1,0 +1,209 @@
+.footer {
+    background: $bg-dark;
+    padding: $spacing-lg 0;
+    margin-top: $spacing-xxl;
+
+    .footer-top {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: $spacing-md;
+
+        @media (max-width: $breakpoint-md) {
+            justify-content: center;
+        }
+    }
+
+    .footer-social {
+        display: flex;
+        gap: $spacing-md;
+        align-items: center;
+
+        @media (max-width: $breakpoint-md) {
+            justify-content: center;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: $border-radius-full;
+            color: $text-primary;
+            font-size: $font-lg;
+            transition: $transition-fast;
+
+            &.social-email {
+                background: $bg-card;
+                color: $text-primary;
+            }
+
+            &.social-facebook {
+                background: #1877f2;
+                color: white;
+            }
+
+            &.social-instagram {
+                background: $accent-gradient;
+                color: white;
+            }
+
+            &.social-youtube {
+                background: #ff0000;
+                color: white;
+            }
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: $shadow-md;
+            }
+        }
+    }
+
+    .footer-separator {
+        height: 1px;
+        background: white;
+        margin: $spacing-md 0;
+        opacity: 0.2;
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $spacing-lg;
+        text-align: center;
+    }
+
+    .payment-methods {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-sm;
+        align-items: center;
+    }
+
+    .payment-row {
+        display: flex;
+        gap: $spacing-xs;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .payment-icon {
+        width: 60px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: $border-radius-sm;
+        transition: $transition-fast;
+        font-size: $font-xs;
+        font-weight: $font-weight-bold;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: $shadow-sm;
+        }
+
+        &.payment-cashapp {
+            background: #00d625;
+            color: white;
+            
+            i {
+                font-size: $font-lg;
+            }
+        }
+
+        &.payment-apple {
+            background: white;
+            color: black;
+            
+            .payment-text {
+                font-size: 8px;
+                font-weight: 600;
+            }
+        }
+
+        &.payment-google {
+            background: white;
+            color: black;
+            
+            .payment-text {
+                font-size: 8px;
+                font-weight: 600;
+                color: black;
+            }
+        }
+
+        &.payment-visa {
+            background: white;
+            color: #0e4595;
+            
+            .payment-logo {
+                font-size: 10px;
+                font-weight: 700;
+            }
+        }
+
+        &.payment-mastercard {
+            background: white;
+            
+            .mastercard-circles {
+                display: flex;
+                gap: 2px;
+                
+                .circle {
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    
+                    &.circle-red {
+                        background: #eb001b;
+                    }
+                    
+                    &.circle-orange {
+                        background: #ff5f00;
+                        margin-left: -4px;
+                    }
+                }
+            }
+        }
+
+        &.payment-amex {
+            background: #006fcf;
+            color: white;
+            
+            .payment-logo {
+                font-size: 8px;
+                font-weight: 700;
+            }
+        }
+
+        &.payment-discover {
+            background: white;
+            color: black;
+            
+            .payment-logo {
+                font-size: 7px;
+                font-weight: 700;
+            }
+        }
+
+        &.payment-jcb {
+            background: white;
+            color: #c6302f;
+            
+            .payment-logo {
+                font-size: 10px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .copyright {
+        color: white;
+        font-size: $font-xs;
+        line-height: $line-height-relaxed;
+    }
+}
+

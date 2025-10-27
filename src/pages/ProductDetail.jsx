@@ -47,7 +47,6 @@ function ProductDetail() {
 
                         <div className="product-purchase">
                             <div className="price">${gecko.price}</div>
-                            <button className="btn-add-to-cart">Add to Cart</button>
                         </div>
                     </div>
                 </div>

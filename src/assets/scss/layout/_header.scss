@@ -22,6 +22,7 @@
     font-size: $font-xl;
     font-weight: bold;
     transition: $transition;
+    text-decoration: none;
 
     &-icon {
       font-size: 2.5rem;
@@ -57,6 +58,7 @@
       font-weight: 500;
       transition: $transition;
       position: relative;
+      text-decoration: none;
 
       &:hover {
         background: rgba($accent-orange, 0.1);
@@ -75,24 +77,283 @@
         min-width: 18px;
         text-align: center;
       }
+
+      .favorites-count {
+        display: inline-block;
+        background: $accent-orange;
+        color: white;
+        padding: 2px 8px;
+        border-radius: 50%;
+        font-size: 0.7rem;
+        font-weight: bold;
+        margin-left: 4px;
+        min-width: 18px;
+        text-align: center;
+      }
+    }
+  }
+
+  // Mobile Menu Toggle Button
+  .mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: $spacing-xs;
+    
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 28px;
+      
+      span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: $text-primary;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+        
+        &:nth-child(1) {
+          transform-origin: top left;
+        }
+        &:nth-child(3) {
+          transform-origin: bottom left;
+        }
+      }
+      
+      &.active {
+        span:nth-child(1) {
+          transform: rotate(45deg) translate(8px, 5px);
+        }
+        span:nth-child(2) {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        span:nth-child(3) {
+          transform: rotate(-45deg) translate(7px, -5px);
+        }
+      }
     }
   }
 }
 
+// Desktop Navigation
+.desktop-nav {
+  display: flex;
+  
+  @media (max-width: $breakpoint-md) {
+    display: none;
+  }
+}
+
+// Mobile Sidebar
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+  }
+
+  &-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 320px;
+    max-width: 85vw;
+    height: 100%;
+    background: $bg-card;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+  }
+  
+  &.open &-content {
+    transform: translateX(0);
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-lg;
+    border-bottom: 1px solid $border-dark;
+    
+    .mobile-logo {
+      display: flex;
+      align-items: center;
+      gap: $spacing-sm;
+      text-decoration: none;
+      
+      .logo-icon {
+        font-size: 2rem;
+        background: linear-gradient(135deg, $accent-orange, $accent-light);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .logo-text {
+        font-size: $font-lg;
+        font-weight: 700;
+        color: $text-primary;
+      }
+    }
+    
+    .mobile-close-btn {
+      width: 32px;
+      height: 32px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      
+      span {
+        position: absolute;
+        display: block;
+        width: 20px;
+        height: 3px;
+        background: $text-primary;
+        border-radius: 3px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        &:nth-child(1) {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &:nth-child(2) {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
+// Mobile Navigation
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-md 0;
+  
+  .mobile-nav-link {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    padding: $spacing-md $spacing-lg;
+    color: $text-primary;
+    text-decoration: none;
+    font-size: $font-md;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid $border-dark;
+    
+    i {
+      font-size: 1.2rem;
+      color: $accent-orange;
+      width: 24px;
+      text-align: center;
+    }
+    
+    &:hover,
+    &:active {
+      background: rgba($accent-orange, 0.1);
+      color: $accent-orange;
+    }
+    
+    &:last-child {
+      border-bottom: none;
+    }
+    
+    .cart-count {
+      margin-left: auto;
+      background: $accent-orange;
+      color: $bg-dark;
+      padding: 4px 10px;
+      border-radius: 50%;
+      font-size: 0.75rem;
+      font-weight: bold;
+      min-width: 20px;
+      text-align: center;
+    }
+
+    .favorites-count {
+      margin-left: auto;
+      background: $accent-orange;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 50%;
+      font-size: 0.75rem;
+      font-weight: bold;
+      min-width: 20px;
+      text-align: center;
+    }
+  }
+  
+  .mobile-language-selector {
+    padding: $spacing-md $spacing-lg;
+    border-top: 1px solid $border-dark;
+    border-bottom: 1px solid $border-dark;
+  }
+}
+
+// Responsive styles
 @media (max-width: $breakpoint-md) {
   .header {
     &-content {
-      justify-content: center;
+      justify-content: space-between;
     }
 
-    .nav {
-      justify-content: center;
-      gap: $spacing-xs;
+    .logo-text {
+      font-size: $font-md;
     }
 
-    .nav-link {
-      font-size: $font-xs;
-      padding: $spacing-xs;
+    .mobile-menu-toggle {
+      display: block;
     }
+  }
+}
+
+// Smooth scroll for mobile sidebar
+.mobile-sidebar-content {
+  scrollbar-width: thin;
+  scrollbar-color: $accent-orange $bg-card;
+  
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: $bg-card;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: $accent-orange;
+    border-radius: 3px;
+  }
+  
+  &::-webkit-scrollbar-thumb:hover {
+    background: darken($accent-orange, 10%);
   }
 }

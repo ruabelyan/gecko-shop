@@ -1,6 +1,7 @@
 // Base
 @import './base/reset';
 @import './base/variables';
+@import './base/animations';
 
 // Layout
 @import './layout/header';
@@ -11,9 +12,16 @@
 @import './components/product-grid';
 @import './components/filter';
 @import './components/language-selector';
+@import './components/loader';
+@import './components/empty-state';
+@import './components/footer';
+@import './components/gecko-gallery';
 
 // Pages
 @import './pages/product-detail';
 @import './pages/contact';
-@import './pages/terms';
 @import './pages/available';
+@import './pages/available-grid';
+@import './pages/home';
+@import './pages/about';
+@import './pages/favorites';

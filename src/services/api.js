@@ -1,21 +1,49 @@
 const API_BASE_URL = 'http://localhost:5001/api';
 
-// Fetch all geckos
-export const getGeckos = async (category = 'all', availableOnly = true) => {
+// Fetch all geckos with pagination support
+export const getGeckos = async (category = 'all', availableOnly = true, limit = null, offset = 0) => {
   try {
     const params = new URLSearchParams();
     if (category !== 'all') params.append('category', category);
     if (availableOnly) params.append('available_only', 'true');
-    
+    if (limit) {
+      params.append('limit', limit);
+      params.append('offset', offset);
+    }
+
     const response = await fetch(`${API_BASE_URL}/geckos?${params.toString()}`);
     if (!response.ok) throw new Error('Failed to fetch geckos');
-    
+
     const data = await response.json();
     return data.geckos || [];
   } catch (error) {
     console.error('Error fetching geckos:', error);
     // Fallback to mock data
-    return getMockGeckos();
+    const allGeckos = getMockGeckos();
+    // Apply pagination to mock data
+    if (limit) {
+      return allGeckos.slice(offset, offset + limit);
+    }
+    return allGeckos;
+  }
+};
+
+// Get total count of geckos for a category
+export const getGeckosCount = async (category = 'all', availableOnly = true) => {
+  try {
+    const params = new URLSearchParams();
+    if (category !== 'all') params.append('category', category);
+    if (availableOnly) params.append('available_only', 'true');
+
+    const response = await fetch(`${API_BASE_URL}/geckos?${params.toString()}`);
+    if (!response.ok) throw new Error('Failed to fetch geckos');
+
+    const data = await response.json();
+    return data.geckos ? data.geckos.length : 0;
+  } catch (error) {
+    console.error('Error fetching geckos count:', error);
+    const allGeckos = getMockGeckos();
+    return allGeckos.length;
   }
 };
 
@@ -24,7 +52,7 @@ export const getGeckoById = async (id) => {
   try {
     const response = await fetch(`${API_BASE_URL}/geckos/${id}`);
     if (!response.ok) throw new Error('Failed to fetch gecko');
-    
+
     const data = await response.json();
     return data.gecko;
   } catch (error) {
@@ -39,7 +67,7 @@ export const getCategories = async () => {
   try {
     const response = await fetch(`${API_BASE_URL}/geckos/categories/all`);
     if (!response.ok) throw new Error('Failed to fetch categories');
-    
+
     const data = await response.json();
     return data.categories || [];
   } catch (error) {

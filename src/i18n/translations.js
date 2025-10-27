@@ -61,7 +61,19 @@ export const translations = {
 
         // No results
         'empty.title': 'No geckos found',
-        'empty.description': 'Try adjusting your filters'
+        'empty.description': 'Try adjusting your filters',
+
+        // About Page
+        'about.intro1': 'A brief summary of our company, our support staff, and the organizations to which we belong.',
+        'about.treeInitiative': 'Each and every order you place with us plants one native tree in Armenia, regardless of what you purchase.',
+        'about.history.title': 'Our History',
+        'about.history.text': 'Papa Pharm Armenia is a business predicated upon an enthusiasm for reptiles, amphibians, and invertebrates. These fascinating creatures are appreciated by a small percentage of the overall population, and that\'s who we serve.',
+        'about.member.title': 'Our Commitment',
+        'about.member.text1': 'We are dedicated to providing the highest quality care for our geckos, ensuring each one is healthy, well-socialized, and ready to thrive in their new homes. Our team consists of passionate herpetologists and experienced breeders who understand the unique needs of these amazing creatures.',
+        'about.member.text2': 'We believe in educating our customers about proper gecko care, providing comprehensive resources and ongoing support long after your gecko arrives home. Every gecko we send out is treated with the utmost care and respect.',
+        'about.member.text3': 'We are proud to be part of the international gecko breeding community and are committed to ethical breeding practices that prioritize the health and wellbeing of our animals.',
+        'about.memberships.title': 'Our Memberships & Initiatives',
+        'about.memberships.text': 'Papa Pharm Armenia is committed to reptile conservation and ethical breeding practices. We plant one native tree in Armenia for each and every order our customers place, contributing to local environmental restoration efforts. We strongly encourage all reptile enthusiasts to support conservation efforts and practice responsible pet ownership.'
     },
 
     es: {
@@ -126,7 +138,19 @@ export const translations = {
 
         // No results
         'empty.title': 'No se encontraron gecos',
-        'empty.description': 'Intenta ajustar tus filtros'
+        'empty.description': 'Intenta ajustar tus filtros',
+
+        // About Page
+        'about.intro1': 'Un breve resumen de nuestra empresa, nuestro equipo de soporte y las organizaciones a las que pertenecemos.',
+        'about.treeInitiative': 'Cada pedido que realice con nosotros planta un árbol nativo en Armenia, independientemente de lo que compre.',
+        'about.history.title': 'Nuestra Historia',
+        'about.history.text': 'Papa Pharm Armenia es un negocio basado en el entusiasmo por reptiles, anfibios e invertebrados. Estas criaturas fascinantes son apreciadas por un pequeño porcentaje de la población, y a ellos nos dirigimos.',
+        'about.member.title': 'Nuestro Compromiso',
+        'about.member.text1': 'Estamos dedicados a proporcionar el cuidado de más alta calidad para nuestros gecos, asegurando que cada uno esté saludable, bien socializado y listo para prosperar en sus nuevos hogares.',
+        'about.member.text2': 'Creemos en educar a nuestros clientes sobre el cuidado adecuado de los gecos, proporcionando recursos completos y apoyo continuo mucho después de que su gecko llegue a casa.',
+        'about.member.text3': 'Estamos orgullosos de ser parte de la comunidad internacional de crianza de gecos y estamos comprometidos con prácticas de crianza éticas que priorizan la salud y el bienestar de nuestros animales.',
+        'about.memberships.title': 'Nuestras Membresías e Iniciativas',
+        'about.memberships.text': 'Papa Pharm Armenia está comprometido con la conservación de reptiles y prácticas de crianza éticas. Plantamos un árbol nativo en Armenia por cada pedido que nuestros clientes realizan, contribuyendo a los esfuerzos de restauración ambiental local.'
     },
 
     ru: {
@@ -191,7 +215,19 @@ export const translations = {
 
         // No results
         'empty.title': 'Гекконы не найдены',
-        'empty.description': 'Попробуйте изменить фильтры'
+        'empty.description': 'Попробуйте изменить фильтры',
+
+        // About Page
+        'about.intro1': 'Краткое описание нашей компании, нашей службы поддержки и организаций, в которых мы состоим.',
+        'about.treeInitiative': 'Каждый заказ, который вы делаете у нас, способствует посадке одного местного дерева в Армении, независимо от того, что вы покупаете.',
+        'about.history.title': 'Наша История',
+        'about.history.text': 'Papa Pharm Armenia — это бизнес, основанный на энтузиазме к рептилиям, амфибиям и беспозвоночным. Эти увлекательные существа ценятся небольшой частью населения, и именно им мы служим.',
+        'about.member.title': 'Наше Обязательство',
+        'about.member.text1': 'Мы стремимся обеспечить наивысшее качество ухода за нашими гекконами, гарантируя, что каждый из них здоров, хорошо социализирован и готов процветать в своих новых домах.',
+        'about.member.text2': 'Мы верим в обучение наших клиентов правильному уходу за гекконами, предоставляя комплексные ресурсы и постоянную поддержку задолго после того, как ваш геккон прибудет домой.',
+        'about.member.text3': 'Мы гордимся тем, что являемся частью международного сообщества разведения гекконов и привержены этичным практикам разведения, которые ставят во главу угла здоровье и благополучие наших животных.',
+        'about.memberships.title': 'Наши Членства и Инициативы',
+        'about.memberships.text': 'Papa Pharm Armenia привержен сохранению рептилий и этичным практикам разведения. Мы сажаем одно местное дерево в Армении за каждый заказ наших клиентов, способствуя местным усилиям по восстановлению окружающей среды.'
     },
 
     hy: {
@@ -256,7 +292,19 @@ export const translations = {
 
         // No results
         'empty.title': 'Գեկոններ չի գտնվել',
-        'empty.description': 'Փորձեք փոխել ֆիլտրերը'
+        'empty.description': 'Փորձեք փոխել ֆիլտրերը',
+
+        // About Page
+        'about.intro1': 'Մեր ընկերության, աջակցության անձնակազմի և այն կազմակերպությունների համառոտ նկարագրությունը, որոնց մաս ենք կազմում:',
+        'about.treeInitiative': 'Ներկայումս պատվերը, որը դուք կատարում եք մեզ մոտ, տնկում է մեկ բնիկ ծառ Հայաստանում, անկախ նրանից, թե ինչ եք գնում:',
+        'about.history.title': 'Մեր Պատմությունը',
+        'about.history.text': 'Papa Pharm Armenia-ն բիզնես է, որը հիմնված է սողունների, երկկենցաղների և անողնաշարավորների նկատմամբ հետաքրքրասիրության վրա: Այս հետաքրքիր արարածները գնահատվում են բնակչության փոքր տոկոսով, և մենք նրանց ենք ծառայում:',
+        'about.member.title': 'Մեր Պարտավորությունը',
+        'about.member.text1': 'Մենք նվիրված ենք մեր գեկոններին ամենաբարձր որակի խնամք ապահովելուն, երաշխավորելով, որ յուրաքանչյուրը առողջ է, լավ սոցիալիզացված և պատրաստ է թեփացնել նոր տներում:',
+        'about.member.text2': 'Մենք հավատում ենք մեր հաճախորդներին գեկոնի համապատասխան խնամքի մասին կրթելուն, ապահովելով համապարփակ ռեսուրսներ և շարունակական աջակցություն շատ ուշ՝ գեկոնի տան ժամանումից հետո:',
+        'about.member.text3': 'Մենք հպարտ ենք, որ մաս ենք կազմում գեկոնի բազմացման միջազգային համայնքին և նվիրված ենք էթիկական բազմացման պրակտիկաներին, որոնք առաջնորդվում են մեր կենդանիների առողջությամբ և բարեկեցությամբ:',
+        'about.memberships.title': 'Մեր Անդամակցությունները և Նախաձեռնությունները',
+        'about.memberships.text': 'Papa Pharm Armenia-ն նվիրված է սողունների պահպանությանը և էթիկական բազմացման պրակտիկաներին: Մենք տնկում ենք մեկ բնիկ ծառ Հայաստանում հաճախորդների կատարած յուրաքանչյուր պատվերի համար, նպաստելով տեղական բնապահպանական վերականգնման ջանքերին:'
     }
 };
 

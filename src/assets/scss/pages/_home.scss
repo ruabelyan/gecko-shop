@@ -1,0 +1,143 @@
+.page-home {
+    .hero {
+        background: linear-gradient(135deg, $bg-dark 0%, lighten($bg-dark, 3%) 100%);
+        padding: $spacing-xxl 0;
+        text-align: center;
+        border-bottom: 1px solid $border-dark;
+
+        .hero-title {
+            font-size: $font-xxxl;
+            margin-bottom: $spacing-sm;
+            background: $accent-gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: $font-lg;
+            color: $text-secondary;
+        }
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: $font-xl;
+        margin-bottom: $spacing-md;
+        color: $text-primary;
+        font-weight: $font-weight-bold;
+    }
+
+    .divider-section {
+        margin-top: $spacing-xxl;
+        padding-top: $spacing-xl;
+        border-top: 1px solid $border-dark;
+    }
+
+    .category-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: $spacing-sm;
+        margin-bottom: $spacing-lg;
+        
+        @media (max-width: $breakpoint-md) {
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        }
+    }
+
+    .category-card {
+        background: $bg-card;
+        border-radius: $border-radius-md;
+        overflow: hidden;
+        cursor: pointer;
+        transition: $transition;
+        border: 2px solid transparent;
+        box-shadow: $shadow-sm;
+
+        &:hover {
+            transform: translateY(-8px);
+            box-shadow: $shadow-lg;
+            border-color: $accent-orange;
+
+            .category-image {
+                transform: scale(1.1);
+            }
+
+            .geckoboa-logo {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+        }
+
+        .category-image-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 100%; // Square aspect ratio
+            background: $border-dark;
+            overflow: hidden;
+        }
+
+        .category-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .geckoboa-logo {
+            position: absolute;
+            bottom: $spacing-xxs;
+            right: $spacing-xxs;
+            background: rgba($bg-dark, 0.9);
+            padding: 3px 6px;
+            border-radius: $border-radius-sm;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            opacity: 0.8;
+            transition: $transition;
+
+            .logo-text {
+                font-size: 6px;
+                font-weight: $font-weight-bold;
+                color: $text-primary;
+                letter-spacing: 1px;
+            }
+
+            .logo-icon {
+                font-size: 8px;
+            }
+        }
+
+        .category-label {
+            padding: $spacing-xs $spacing-sm;
+            text-align: center;
+            color: $text-primary;
+            font-size: $font-xs;
+            font-weight: $font-weight-semibold;
+        }
+    }
+
+    .back-button {
+        background: $bg-card;
+        border: 1px solid $border-dark;
+        color: $text-primary;
+        padding: $spacing-xs $spacing-md;
+        border-radius: $border-radius;
+        cursor: pointer;
+        margin-bottom: $spacing-md;
+        transition: $transition-fast;
+        font-size: $font-sm;
+        font-weight: $font-weight-medium;
+
+        &:hover {
+            background: $bg-card-hover;
+            border-color: $accent-orange;
+            color: $accent-orange;
+        }
+    }
+}
+

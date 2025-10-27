@@ -1,118 +1,99 @@
 .page-contact {
-  .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: $spacing-xl;
-    margin-top: $spacing-xl;
+    padding: $spacing-xxl 0;
+    min-height: 70vh;
 
-    @media (max-width: $breakpoint-lg) {
-      grid-template-columns: 1fr;
+    .contact-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 $spacing-md;
     }
-  }
 
-  .contact-info-card,
-  .contact-form-card {
-    background: $bg-card;
-    padding: $spacing-xl;
-    border-radius: $border-radius;
-    box-shadow: $box-shadow;
-    border: 1px solid $border-dark;
-  }
-
-  h2 {
-    color: $accent-orange;
-    margin-bottom: $spacing-lg;
-    font-size: $font-xl;
-  }
-
-  h3 {
-    color: $text-primary;
-    margin-top: $spacing-lg;
-    margin-bottom: $spacing-sm;
-    font-size: $font-md;
-  }
-
-  .contact-info-card {
-    .info-section {
-      p {
-        color: $text-secondary;
-        margin-bottom: $spacing-md;
-        line-height: 1.6;
-
-        a {
-          color: $accent-orange;
-          transition: $transition;
-
-          &:hover {
-            color: $accent-light;
-            text-decoration: underline;
-          }
-        }
-      }
+    .contact-title {
+        font-size: $font-xxxl;
+        color: white;
+        margin-bottom: $spacing-lg;
+        font-weight: $font-weight-bold;
+        text-align: left;
     }
-  }
 
-  .contact-form {
-    .form-group {
-      margin-bottom: $spacing-md;
-
-      label {
-        display: block;
-        margin-bottom: $spacing-xs;
-        color: $text-secondary;
-        font-size: $font-sm;
-        font-weight: 500;
-      }
-
-      input[type="text"],
-      input[type="email"],
-      textarea {
-        width: 100%;
-        padding: $spacing-sm;
-        border: 1px solid $border-dark;
-        border-radius: $border-radius;
-        background: lighten($bg-dark, 5%);
-        color: $text-primary;
+    .warning-message {
         font-size: $font-md;
-        transition: $transition;
-        font-family: inherit;
-
-        &:focus {
-          outline: none;
-          border-color: $accent-orange;
-          box-shadow: 0 0 0 3px rgba($accent-orange, 0.1);
-        }
-
-        &::placeholder {
-          color: $text-secondary;
-          opacity: 0.5;
-        }
-      }
-
-      textarea {
-        resize: vertical;
-        min-height: 120px;
-      }
+        color: $danger;
+        margin-bottom: $spacing-xl;
+        font-weight: $font-weight-medium;
     }
 
-    .submit-btn {
-      background: $accent-orange;
-      color: $bg-dark;
-      padding: $spacing-md $spacing-xl;
-      border-radius: $border-radius;
-      font-size: $font-md;
-      font-weight: bold;
-      cursor: pointer;
-      width: 100%;
-      transition: $transition;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+    .contact-content {
+        color: white;
+        font-size: $font-md;
+        line-height: $line-height-relaxed;
+        margin-bottom: $spacing-xl;
 
-      &:hover {
-        background: $accent-light;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 15px rgba($accent-orange, 0.4);
-      }
+        p {
+            margin-bottom: $spacing-md;
+            color: white;
+        }
     }
-  }
+
+    .gecko-eating-section {
+        margin-bottom: $spacing-xl;
+
+        p {
+            color: white;
+            font-size: $font-md;
+            margin-bottom: $spacing-sm;
+        }
+
+        .gecko-eating-link {
+            color: white;
+            text-decoration: underline;
+            font-size: $font-md;
+            transition: $transition-fast;
+
+            &:hover {
+                color: $accent-orange;
+            }
+        }
+    }
+
+    .contact-email-section {
+        .email-label {
+            color: white;
+            font-size: $font-md;
+            margin-bottom: $spacing-xs;
+        }
+
+        .email-link {
+            color: #2196f3;
+            font-size: $font-md;
+            font-weight: $font-weight-medium;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: $spacing-sm;
+            transition: $transition-fast;
+
+            &:hover {
+                color: lighten(#2196f3, 10%);
+                text-decoration: underline;
+            }
+        }
+
+        .email-note {
+            color: white;
+            font-size: $font-sm;
+            margin-top: $spacing-xs;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-md) {
+    .page-contact {
+        .contact-title {
+            font-size: $font-xxl;
+        }
+
+        .contact-container {
+            padding: 0 $spacing-sm;
+        }
+    }
 }

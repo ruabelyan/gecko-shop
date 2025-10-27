@@ -1,4 +1,4 @@
-import { getGeckos, getGeckoById, getCategories } from '../services/api.js';
+import { getGeckos, getGeckoById, getCategories, getGeckosCount } from '../services/api.js';
 
 // For backward compatibility, these functions now use the API
 export const geckos = []; // Will be populated by API
@@ -27,4 +27,4 @@ export const getAvailableGeckos = () => {
 }
 
 // This is the main function to get geckos - now uses API
-export { getGeckos, getGeckoById, getCategories };
+export { getGeckos, getGeckoById, getCategories, getGeckosCount };
