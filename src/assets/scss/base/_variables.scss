@@ -1,0 +1,41 @@
+// Dark Theme Colors (inspired by geckoboa.com)
+$bg-dark: #000000;
+$bg-card: #1a1a1a;
+$text-primary: #FFFFFF;
+$text-secondary: #CCCCCC;
+$accent-orange: #FF4500;  // Red-orange accent
+$accent-light: #FFA500;  // Light orange
+$border-dark: #333333;
+$border-light: #444444;
+
+// Status colors
+$success: #4CAF50;
+$danger: #DC143C;
+$warning: #FFB800;
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+
+// Font Sizes
+$font-xs: 0.75rem;
+$font-sm: 0.875rem;
+$font-md: 1rem;
+$font-lg: 1.25rem;
+$font-xl: 1.5rem;
+$font-xxl: 2rem;
+$font-xxxl: 3rem;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Other
+$border-radius: 8px;
+$box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+$transition: all 0.3s ease;

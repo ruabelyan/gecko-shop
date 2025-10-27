@@ -1,0 +1,65 @@
+.main-content {
+  min-height: calc(100vh - 100px);
+  padding: $spacing-xl 0;
+  background: $bg-dark;
+}
+
+.page-home {
+  .hero {
+    background: linear-gradient(135deg, $bg-card 0%, #2a2a2a 100%);
+    color: $text-primary;
+    padding: $spacing-xl 0;
+    text-align: center;
+    margin-bottom: $spacing-xl;
+    border-bottom: 1px solid $border-dark;
+
+    &-title {
+      font-size: $font-xxl;
+      margin-bottom: $spacing-sm;
+      background: linear-gradient(135deg, $accent-orange, $accent-light);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    &-subtitle {
+      font-size: $font-lg;
+      color: $text-secondary;
+      opacity: 0.9;
+    }
+  }
+}
+
+.page-available,
+.page-terms,
+.page-contact,
+.page-about,
+.page-cart {
+  h1, h2, h3 {
+    color: $accent-orange;
+    margin-bottom: $spacing-md;
+  }
+
+  .page-title {
+    font-size: $font-xxl;
+    text-align: center;
+    margin-bottom: $spacing-sm;
+    background: linear-gradient(135deg, $accent-orange, $accent-light);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .page-subtitle {
+    text-align: center;
+    color: $text-secondary;
+    margin-bottom: $spacing-lg;
+    font-size: $font-md;
+  }
+
+  p {
+    color: $text-secondary;
+    margin-bottom: $spacing-sm;
+    line-height: 1.8;
+  }
+}

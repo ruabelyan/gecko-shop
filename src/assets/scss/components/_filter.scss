@@ -1,0 +1,46 @@
+.filter-bar {
+  margin: $spacing-lg 0;
+  padding: $spacing-lg;
+  background: $bg-card;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  border: 1px solid $border-dark;
+
+  &-title {
+    font-size: $font-md;
+    margin-bottom: $spacing-md;
+    color: $text-primary;
+    font-weight: 600;
+  }
+
+  .filter-buttons {
+    display: flex;
+    gap: $spacing-sm;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    padding: $spacing-sm $spacing-md;
+    border-radius: $border-radius;
+    background: $border-dark;
+    color: $text-secondary;
+    font-size: $font-sm;
+    font-weight: 500;
+    transition: $transition;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+      background: lighten($border-dark, 5%);
+      color: $text-primary;
+      border-color: $accent-orange;
+    }
+
+    &.active {
+      background: $accent-orange;
+      color: $bg-dark;
+      border-color: $accent-orange;
+      font-weight: bold;
+    }
+  }
+}
