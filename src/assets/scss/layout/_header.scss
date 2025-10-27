@@ -332,6 +332,20 @@
     .mobile-menu-toggle {
       display: block;
     }
+
+    // Hide all desktop navigation on mobile
+    .nav:not(.mobile-nav) {
+      display: none !important;
+    }
+
+    .desktop-nav {
+      display: none !important;
+    }
+
+    // Hide language selector on mobile (it's in the sidebar)
+    .language-selector {
+      display: none !important;
+    }
   }
 }
 
