@@ -1,7 +1,22 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import LanguageSelector from './LanguageSelector'
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../context/LanguageContext'
 
 function Header() {
+    const { t } = useLanguage()
+    const [showLanguageSelector, setShowLanguageSelector] = useState(true)
+
+    useEffect(() => {
+        fetch('http://localhost:5001/api/settings/show_language_selector')
+            .then(res => res.json())
+            .then(data => setShowLanguageSelector(data.value))
+            .catch(err => {
+                console.error('Error loading language selector setting:', err)
+                setShowLanguageSelector(true) // Default to showing
+            })
+    }, [])
+
     return (
         <header className="header">
             <div className="container">
@@ -12,14 +27,15 @@ function Header() {
                     </Link>
 
                     <nav className="nav">
-                        <Link to="/" className="nav-link">Home</Link>
-                        <Link to="/available" className="nav-link">Available</Link>
-                        <Link to="/about" className="nav-link">About</Link>
-                        <Link to="/terms" className="nav-link">Terms</Link>
-                        <Link to="/contact" className="nav-link">Contact</Link>
+                        <Link to="/" className="nav-link">{t('nav.home')}</Link>
+                        <Link to="/available" className="nav-link">{t('nav.available')}</Link>
+                        <Link to="/about" className="nav-link">{t('nav.about')}</Link>
+                        <Link to="/terms" className="nav-link">{t('nav.terms')}</Link>
+                        <Link to="/contact" className="nav-link">{t('nav.contact')}</Link>
                         <Link to="/cart" className="nav-link">
-                            Cart <span className="cart-count">0</span>
+                            {t('nav.cart')} <span className="cart-count">0</span>
                         </Link>
+                        {showLanguageSelector && <LanguageSelector />}
                     </nav>
                 </div>
             </div>

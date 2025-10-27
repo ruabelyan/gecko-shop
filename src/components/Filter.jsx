@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { getCategories } from '../data/geckos'
+import { useLanguage } from '../context/LanguageContext'
 
 function Filter({ selectedCategory, onCategoryChange, categories: propCategories }) {
     const [categories, setCategories] = useState([])
+    const { t } = useLanguage()
 
     useEffect(() => {
         loadCategories()
@@ -24,7 +26,7 @@ function Filter({ selectedCategory, onCategoryChange, categories: propCategories
     }
     return (
         <div className="filter-bar">
-            <h2 className="filter-title">Filter by Category</h2>
+            <h2 className="filter-title">{t('common.filter')}</h2>
             <div className="filter-buttons">
                 {displayCategories.map(category => (
                     <button
