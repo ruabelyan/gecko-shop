@@ -14,12 +14,12 @@ function Favorites() {
                 <div className="favorites-header">
                     <h1 className="page-title">
                         <i className="fas fa-heart"></i>
-                        My Favorites
+                        {t('favorites.title')}
                     </h1>
                     {favorites.length > 0 && (
                         <button className="btn-clear-favorites" onClick={clearFavorites}>
                             <i className="fas fa-trash"></i>
-                            Clear All
+                            {t('favorites.clearAll')}
                         </button>
                     )}
                 </div>
@@ -29,11 +29,11 @@ function Favorites() {
                         <div className="empty-icon">
                             <i className="far fa-heart"></i>
                         </div>
-                        <h2>No Favorites Yet</h2>
-                        <p>Start adding geckos to your favorites by clicking the heart icon on any gecko!</p>
+                        <h2>{t('favorites.empty.title')}</h2>
+                        <p>{t('favorites.empty.description')}</p>
                         <button className="btn-browse" onClick={() => window.location.href = '/available'}>
                             <i className="fas fa-store"></i>
-                            Browse Available Geckos
+                            {t('favorites.empty.browse')}
                         </button>
                     </div>
                 ) : (

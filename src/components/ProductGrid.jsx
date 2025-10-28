@@ -148,9 +148,9 @@ function ProductGrid({ category, geckos: propGeckos }) {
                     <button
                         className="load-more-btn"
                         onClick={handleLoadMore}
-                        aria-label="Load more geckos"
+                        aria-label={t('loader.loadMore')}
                     >
-                        Load More Geckos
+                        {t('loader.loadMore')}
                     </button>
                 </div>
             )}
@@ -158,7 +158,7 @@ function ProductGrid({ category, geckos: propGeckos }) {
             {/* End of results message */}
             {!hasMore && geckos.length > 0 && (
                 <div className="end-of-results">
-                    <p>You've seen all geckos in this category! 🦎</p>
+                    <p>{t('loader.endOfResults')} 🦎</p>
                 </div>
             )}
         </div>

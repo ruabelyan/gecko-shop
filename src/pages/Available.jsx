@@ -47,7 +47,7 @@ function Available() {
                         className="back-button"
                         onClick={() => setSelectedCategory(null)}
                     >
-                        ← Back to Categories
+                        ← {t('nav.backToCategories')}
                     </button>
                     <h1 className="page-title">{categories.find(c => c.id === selectedCategory)?.name || 'Geckos'}</h1>
                     <ProductGrid

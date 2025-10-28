@@ -66,11 +66,11 @@ function ProductCard({ gecko }) {
                 <Link to={`/gecko/${gecko.id}`}>
                     <div className="product-image">
                         <img src={gecko.image} alt={gecko.name} />
-                        {!gecko.available && <div className="sold-out">Sold Out</div>}
+                        {!gecko.available && <div className="sold-out">{t('product.soldOut')}</div>}
                         <button
                             className={`favorite-btn ${isFavorite(gecko.id) ? 'active' : ''}`}
                             onClick={handleFavoriteClick}
-                            aria-label={isFavorite(gecko.id) ? 'Remove from favorites' : 'Add to favorites'}
+                            aria-label={isFavorite(gecko.id) ? t('favorites.remove.label') : t('favorites.add.label')}
                         >
                             <i className={isFavorite(gecko.id) ? 'fas fa-heart' : 'far fa-heart'}></i>
                         </button>
@@ -90,7 +90,7 @@ function ProductCard({ gecko }) {
                         onClick={handleAskForGecko}
                     >
                         <i className="fas fa-envelope"></i>
-                        Ask for this Gecko
+                        {t('product.askForGecko')}
                     </button>
                 </div>
             </div>
@@ -108,7 +108,7 @@ function ProductCard({ gecko }) {
                         </div>
                         <form onSubmit={handleSubmitInquiry}>
                             <div className="form-group">
-                                <label htmlFor="inquiry-email">Your Email *</label>
+                                <label htmlFor="inquiry-email">{t('product.inquiryEmail')} *</label>
                                 <input
                                     type="email"
                                     id="inquiry-email"
@@ -119,7 +119,7 @@ function ProductCard({ gecko }) {
                                 />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="inquiry-message">Message</label>
+                                <label htmlFor="inquiry-message">{t('product.inquiryMessage')}</label>
                                 <textarea
                                     id="inquiry-message"
                                     value={inquiryMessage}
@@ -134,7 +134,7 @@ function ProductCard({ gecko }) {
                                     className="btn-cancel"
                                     onClick={() => setShowInquiry(false)}
                                 >
-                                    Cancel
+                                    {t('product.inquiryCancel')}
                                 </button>
                                 <button
                                     type="submit"
@@ -144,12 +144,12 @@ function ProductCard({ gecko }) {
                                     {inquiryStatus === 'sending' ? (
                                         <>
                                             <i className="fas fa-spinner fa-spin"></i>
-                                            Sending...
+                                            {t('product.inquirySending')}
                                         </>
                                     ) : (
                                         <>
                                             <i className="fas fa-envelope"></i>
-                                            Send Inquiry
+                                            {t('product.sendInquiry')}
                                         </>
                                     )}
                                 </button>

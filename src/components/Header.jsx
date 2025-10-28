@@ -59,7 +59,7 @@ function Header() {
                             <Link to="/about" className="nav-link">{t('nav.about')}</Link>
                             <Link to="/contact" className="nav-link">{t('nav.contact')}</Link>
                             <Link to="/favorites" className="nav-link">
-                                Favorites
+                                {t('nav.favorites')}
                                 {favoritesCount > 0 && (
                                     <span className="favorites-count">{favoritesCount}</span>
                                 )}
@@ -115,7 +115,7 @@ function Header() {
                             {t('nav.contact')}
                         </Link>
                         <Link to="/favorites" className="mobile-nav-link" onClick={closeMobileMenu}>
-                            Favorites
+                            {t('nav.favorites')}
                             {favoritesCount > 0 && (
                                 <span className="favorites-count">{favoritesCount}</span>
                             )}

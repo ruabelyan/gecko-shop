@@ -73,7 +73,34 @@ export const translations = {
         'about.member.text2': 'We believe in educating our customers about proper gecko care, providing comprehensive resources and ongoing support long after your gecko arrives home. Every gecko we send out is treated with the utmost care and respect.',
         'about.member.text3': 'We are proud to be part of the international gecko breeding community and are committed to ethical breeding practices that prioritize the health and wellbeing of our animals.',
         'about.memberships.title': 'Our Memberships & Initiatives',
-        'about.memberships.text': 'Papa Pharm Armenia is committed to reptile conservation and ethical breeding practices. We plant one native tree in Armenia for each and every order our customers place, contributing to local environmental restoration efforts. We strongly encourage all reptile enthusiasts to support conservation efforts and practice responsible pet ownership.'
+        'about.memberships.text': 'Papa Pharm Armenia is committed to reptile conservation and ethical breeding practices. We plant one native tree in Armenia for each and every order our customers place, contributing to local environmental restoration efforts. We strongly encourage all reptile enthusiasts to support conservation efforts and practice responsible pet ownership.',
+
+        // Favorites
+        'nav.favorites': 'Favorites',
+        'favorites.title': 'My Favorites',
+        'favorites.clearAll': 'Clear All',
+        'favorites.empty.title': 'No Favorites Yet',
+        'favorites.empty.description': 'Start adding geckos to your favorites by clicking the heart icon on any gecko!',
+        'favorites.empty.browse': 'Browse Available Geckos',
+        'favorites.remove.label': 'Remove from favorites',
+        'favorites.add.label': 'Add to favorites',
+
+        // Products
+        'product.askForGecko': 'Ask for this Gecko',
+        'product.soldOut': 'Sold Out',
+        'product.sendInquiry': 'Send Inquiry',
+        'product.inquiryEmail': 'Your Email',
+        'product.inquiryMessage': 'Message',
+        'product.inquirySending': 'Sending...',
+        'product.inquiryCancel': 'Cancel',
+        'product.inquirySuccess': 'Your email has been sent! Please check your email client.',
+
+        // Navigation
+        'nav.backToCategories': 'Back to Categories',
+
+        // Loader
+        'loader.loadMore': 'Load More Geckos',
+        'loader.endOfResults': 'You\'ve seen all geckos in this category!'
     },
 
     es: {
@@ -150,7 +177,34 @@ export const translations = {
         'about.member.text2': 'Creemos en educar a nuestros clientes sobre el cuidado adecuado de los gecos, proporcionando recursos completos y apoyo continuo mucho después de que su gecko llegue a casa.',
         'about.member.text3': 'Estamos orgullosos de ser parte de la comunidad internacional de crianza de gecos y estamos comprometidos con prácticas de crianza éticas que priorizan la salud y el bienestar de nuestros animales.',
         'about.memberships.title': 'Nuestras Membresías e Iniciativas',
-        'about.memberships.text': 'Papa Pharm Armenia está comprometido con la conservación de reptiles y prácticas de crianza éticas. Plantamos un árbol nativo en Armenia por cada pedido que nuestros clientes realizan, contribuyendo a los esfuerzos de restauración ambiental local.'
+        'about.memberships.text': 'Papa Pharm Armenia está comprometido con la conservación de reptiles y prácticas de crianza éticas. Plantamos un árbol nativo en Armenia por cada pedido que nuestros clientes realizan, contribuyendo a los esfuerzos de restauración ambiental local.',
+
+        // Favorites
+        'nav.favorites': 'Favoritos',
+        'favorites.title': 'Mis Favoritos',
+        'favorites.clearAll': 'Limpiar Todo',
+        'favorites.empty.title': 'Aún No Hay Favoritos',
+        'favorites.empty.description': '¡Comienza a agregar gecos a tus favoritos haciendo clic en el icono de corazón en cualquier gecko!',
+        'favorites.empty.browse': 'Explorar Gecos Disponibles',
+        'favorites.remove.label': 'Quitar de favoritos',
+        'favorites.add.label': 'Agregar a favoritos',
+
+        // Products
+        'product.askForGecko': 'Preguntar por este Gecko',
+        'product.soldOut': 'Agotado',
+        'product.sendInquiry': 'Enviar Consulta',
+        'product.inquiryEmail': 'Tu Correo',
+        'product.inquiryMessage': 'Mensaje',
+        'product.inquirySending': 'Enviando...',
+        'product.inquiryCancel': 'Cancelar',
+        'product.inquirySuccess': '¡Tu correo ha sido enviado! Por favor revisa tu cliente de correo.',
+
+        // Navigation
+        'nav.backToCategories': 'Volver a Categorías',
+
+        // Loader
+        'loader.loadMore': 'Cargar Más Gecos',
+        'loader.endOfResults': '¡Has visto todos los gecos en esta categoría!'
     },
 
     ru: {
@@ -227,7 +281,34 @@ export const translations = {
         'about.member.text2': 'Мы верим в обучение наших клиентов правильному уходу за гекконами, предоставляя комплексные ресурсы и постоянную поддержку задолго после того, как ваш геккон прибудет домой.',
         'about.member.text3': 'Мы гордимся тем, что являемся частью международного сообщества разведения гекконов и привержены этичным практикам разведения, которые ставят во главу угла здоровье и благополучие наших животных.',
         'about.memberships.title': 'Наши Членства и Инициативы',
-        'about.memberships.text': 'Papa Pharm Armenia привержен сохранению рептилий и этичным практикам разведения. Мы сажаем одно местное дерево в Армении за каждый заказ наших клиентов, способствуя местным усилиям по восстановлению окружающей среды.'
+        'about.memberships.text': 'Papa Pharm Armenia привержен сохранению рептилий и этичным практикам разведения. Мы сажаем одно местное дерево в Армении за каждый заказ наших клиентов, способствуя местным усилиям по восстановлению окружающей среды.',
+
+        // Favorites
+        'nav.favorites': 'Избранное',
+        'favorites.title': 'Мои Избранные',
+        'favorites.clearAll': 'Очистить Все',
+        'favorites.empty.title': 'Еще Нет Избранных',
+        'favorites.empty.description': 'Начните добавлять гекконов в избранное, нажав на иконку сердца на любом гекконе!',
+        'favorites.empty.browse': 'Просмотреть Доступных Гекконов',
+        'favorites.remove.label': 'Удалить из избранного',
+        'favorites.add.label': 'Добавить в избранное',
+
+        // Products
+        'product.askForGecko': 'Спросить об этом Гекконе',
+        'product.soldOut': 'Распродано',
+        'product.sendInquiry': 'Отправить Запрос',
+        'product.inquiryEmail': 'Ваш Email',
+        'product.inquiryMessage': 'Сообщение',
+        'product.inquirySending': 'Отправка...',
+        'product.inquiryCancel': 'Отмена',
+        'product.inquirySuccess': 'Ваше письмо отправлено! Пожалуйста, проверьте ваш почтовый клиент.',
+
+        // Navigation
+        'nav.backToCategories': 'Назад к Категориям',
+
+        // Loader
+        'loader.loadMore': 'Загрузить Больше Гекконов',
+        'loader.endOfResults': 'Вы видели всех гекконов в этой категории!'
     },
 
     hy: {
@@ -304,7 +385,34 @@ export const translations = {
         'about.member.text2': 'Մենք հավատում ենք մեր հաճախորդներին գեկոնի համապատասխան խնամքի մասին կրթելուն, ապահովելով համապարփակ ռեսուրսներ և շարունակական աջակցություն շատ ուշ՝ գեկոնի տան ժամանումից հետո:',
         'about.member.text3': 'Մենք հպարտ ենք, որ մաս ենք կազմում գեկոնի բազմացման միջազգային համայնքին և նվիրված ենք էթիկական բազմացման պրակտիկաներին, որոնք առաջնորդվում են մեր կենդանիների առողջությամբ և բարեկեցությամբ:',
         'about.memberships.title': 'Մեր Անդամակցությունները և Նախաձեռնությունները',
-        'about.memberships.text': 'Papa Pharm Armenia-ն նվիրված է սողունների պահպանությանը և էթիկական բազմացման պրակտիկաներին: Մենք տնկում ենք մեկ բնիկ ծառ Հայաստանում հաճախորդների կատարած յուրաքանչյուր պատվերի համար, նպաստելով տեղական բնապահպանական վերականգնման ջանքերին:'
+        'about.memberships.text': 'Papa Pharm Armenia-ն նվիրված է սողունների պահպանությանը և էթիկական բազմացման պրակտիկաներին: Մենք տնկում ենք մեկ բնիկ ծառ Հայաստանում հաճախորդների կատարած յուրաքանչյուր պատվերի համար, նպաստելով տեղական բնապահպանական վերականգնման ջանքերին:',
+
+        // Favorites
+        'nav.favorites': 'Նախընտրածներ',
+        'favorites.title': 'Իմ Նախընտրածները',
+        'favorites.clearAll': 'Մաքրել Բոլորը',
+        'favorites.empty.title': 'Դեռ Նախընտրածներ Չկան',
+        'favorites.empty.description': 'Սկսեք ավելացնել գեկոններ ձեր նախընտրածներին՝ սեղմելով սրտի պատկերակը ցանկացած գեկոնի վրա!',
+        'favorites.empty.browse': 'Դիտել Առկա Գեկոններ',
+        'favorites.remove.label': 'Հեռացնել նախընտրածներից',
+        'favorites.add.label': 'Ավելացնել նախընտրածներին',
+
+        // Products
+        'product.askForGecko': 'Հարցնել Այս Գեկոնի մասին',
+        'product.soldOut': 'Վաճառված',
+        'product.sendInquiry': 'Ուղարկել Հարցում',
+        'product.inquiryEmail': 'Ձեր Էլ. Փոստ',
+        'product.inquiryMessage': 'Հաղորդագրություն',
+        'product.inquirySending': 'Ուղարկվում է...',
+        'product.inquiryCancel': 'Չեղարկել',
+        'product.inquirySuccess': 'Ձեր նամակը ուղարկվեց! Խնդրում ենք ստուգել ձեր էլ. փոստի հաճախորդը:',
+
+        // Navigation
+        'nav.backToCategories': 'Վերադառնալ Կատեգորիաներին',
+
+        // Loader
+        'loader.loadMore': 'Բեռնել Ավելին Գեկոններ',
+        'loader.endOfResults': 'Դուք տեսել եք բոլոր գեկոնները այս կատեգորիայում!'
     }
 };
 
