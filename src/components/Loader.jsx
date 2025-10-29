@@ -1,4 +1,3 @@
-import React from 'react';
 import '../assets/scss/components/_loader.scss';
 
 export const Loader = ({ size = 'medium', fullScreen = false }) => {
@@ -12,24 +11,24 @@ export const Loader = ({ size = 'medium', fullScreen = false }) => {
     );
 };
 
-export const SkeletonCard = () => {
+export const SkeletonCard = ({ small = false }) => {
     return (
-        <div className="skeleton-card">
+        <div className={`skeleton-card ${small ? 'skeleton-small' : ''}`}>
             <div className="skeleton-image"></div>
             <div className="skeleton-content">
                 <div className="skeleton-title"></div>
                 <div className="skeleton-text"></div>
-                <div className="skeleton-price"></div>
+                {/* <div className="skeleton-price"></div> */}
             </div>
         </div>
     );
 };
 
-export const SkeletonGrid = ({ count = 6 }) => {
+export const SkeletonGrid = ({ count = 6, small = false }) => {
     return (
-        <div className="skeleton-grid">
+        <div className={`skeleton-grid ${small ? 'skeleton-grid-small' : ''}`}>
             {Array.from({ length: count }).map((_, i) => (
-                <SkeletonCard key={i} />
+                <SkeletonCard key={i} small={small} />
             ))}
         </div>
     );

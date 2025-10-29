@@ -9,7 +9,7 @@ function About() {
             <div className="container">
                 <div className="about-header">
                     <div className="about-intro">
-                        <h1>About Us</h1>
+                        <h1>{t('about.title')}</h1>
                         <p>{t('about.intro1')}</p>
                         <p className="tree-initiative">{t('about.treeInitiative')}</p>
                     </div>

@@ -2,17 +2,18 @@ import { useState, useEffect } from 'react'
 import LanguageSelector from './LanguageSelector'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
+import { API_BASE_URL } from '../config'
 import { useFavorites } from '../context/FavoritesContext'
 
 function Header() {
     const { t } = useLanguage()
     const { favorites } = useFavorites()
-    const [showLanguageSelector, setShowLanguageSelector] = useState(true)
+    const [showLanguageSelector, setShowLanguageSelector] = useState(false)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const favoritesCount = favorites.length
 
     useEffect(() => {
-        fetch('http://localhost:5001/api/settings/show_language_selector')
+        fetch(`${API_BASE_URL}/settings/show_language_selector`)
             .then(res => res.json())
             .then(data => setShowLanguageSelector(data.value))
             .catch(err => {

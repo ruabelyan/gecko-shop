@@ -77,6 +77,16 @@
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: $spacing-md;
     margin-top: $spacing-md;
+
+    &.skeleton-grid-small {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: $spacing-xs;
+
+        @media (max-width: $breakpoint-md) {
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: $spacing-xxs;
+        }
+    }
 }
 
 .skeleton-card {
@@ -85,6 +95,22 @@
     overflow: hidden;
     border: 1px solid $border-dark;
     animation: skeleton-loading 1.5s ease-in-out infinite;
+
+    &.skeleton-small {
+        .skeleton-image {
+            height: 150px;
+        }
+
+        .skeleton-content {
+            padding: $spacing-sm;
+        }
+
+        .skeleton-title,
+        .skeleton-text,
+        .skeleton-price {
+            height: 12px;
+        }
+    }
 }
 
 .skeleton-image {

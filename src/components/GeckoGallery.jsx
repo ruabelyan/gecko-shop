@@ -1,8 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const GeckoGallery = ({ geckos }) => {
     const [selectedGecko, setSelectedGecko] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [visibleItems, setVisibleItems] = useState([]);
+    const observerRef = useRef(null);
+
+    // Intersection Observer for fade-in animation
+    useEffect(() => {
+        if (!geckos || geckos.length === 0) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const id = parseInt(entry.target.getAttribute('data-gecko-id'));
+                        setVisibleItems((prev) => [...prev, id]);
+                    }
+                });
+            },
+            {
+                root: null,
+                rootMargin: '50px',
+                threshold: 0.1
+            }
+        );
+
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach((item) => observer.observe(item));
+
+        return () => {
+            galleryItems.forEach((item) => observer.unobserve(item));
+        };
+    }, [geckos]);
 
     if (!geckos || geckos.length === 0) {
         return null;
@@ -30,27 +60,31 @@ const GeckoGallery = ({ geckos }) => {
     return (
         <>
             <div className="gecko-gallery">
-                {geckos.map((gecko, index) => (
-                    <div
-                        key={gecko.id}
-                        className="gallery-item"
-                        onClick={() => openGeckoViewer(gecko, index)}
-                    >
-                        {gecko.image && (
-                            <img
-                                src={gecko.image}
-                                alt={gecko.name}
-                                className="gallery-image"
-                                loading="lazy"
-                            />
-                        )}
-                        {!gecko.image && (
-                            <div className="gallery-placeholder">
-                                <span className="placeholder-icon">🦎</span>
-                            </div>
-                        )}
-                    </div>
-                ))}
+                {geckos.map((gecko, index) => {
+                    const isVisible = visibleItems.includes(gecko.id);
+                    return (
+                        <div
+                            key={gecko.id}
+                            data-gecko-id={gecko.id}
+                            className={`gallery-item ${isVisible ? 'fade-in' : 'fade-out'}`}
+                            onClick={() => openGeckoViewer(gecko, index)}
+                        >
+                            {gecko.image && (
+                                <img
+                                    src={gecko.image}
+                                    alt={gecko.name}
+                                    className="gallery-image"
+                                    loading="lazy"
+                                />
+                            )}
+                            {!gecko.image && (
+                                <div className="gallery-placeholder">
+                                    <span className="placeholder-icon">🦎</span>
+                                </div>
+                            )}
+                        </div>
+                    );
+                })}
             </div>
 
             {selectedGecko && (

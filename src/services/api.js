@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:5001/api';
+import { API_BASE_URL } from '../config';
 
 // Fetch all geckos with pagination support
 export const getGeckos = async (category = 'all', availableOnly = true, limit = null, offset = 0) => {

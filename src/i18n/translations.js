@@ -7,6 +7,7 @@ export const translations = {
         'nav.about': 'About',
         'nav.contact': 'Contact',
         'nav.terms': 'Terms',
+        'nav.back': 'Back',
 
         // Common
         'common.search': 'Search',
@@ -21,6 +22,8 @@ export const translations = {
         // Home Page
         'home.title': 'Eublepharis Gecko Collection',
         'home.subtitle': 'Premium Quality Leopard Geckos & Morphs',
+        'home.gallery.title': 'Gecko Gallery',
+        'home.categories.title': 'Shop by Category',
 
         // Available Page
         'available.title': 'Available Geckos',
@@ -64,6 +67,7 @@ export const translations = {
         'empty.description': 'Try adjusting your filters',
 
         // About Page
+        'about.title': 'About Us',
         'about.intro1': 'A brief summary of our company, our support staff, and the organizations to which we belong.',
         'about.treeInitiative': 'Each and every order you place with us plants one native tree in Armenia, regardless of what you purchase.',
         'about.history.title': 'Our History',
@@ -94,13 +98,29 @@ export const translations = {
         'product.inquirySending': 'Sending...',
         'product.inquiryCancel': 'Cancel',
         'product.inquirySuccess': 'Your email has been sent! Please check your email client.',
+        'product.notFound.title': 'Gecko Not Found',
+        'product.notFound.description': 'The gecko you\'re looking for doesn\'t exist.',
+        'product.notFound.goHome': 'Go Home',
+        'product.noDescription': 'No description available.',
 
         // Navigation
         'nav.backToCategories': 'Back to Categories',
 
         // Loader
         'loader.loadMore': 'Load More Geckos',
-        'loader.endOfResults': 'You\'ve seen all geckos in this category!'
+        'loader.endOfResults': 'You\'ve seen all geckos in this category!',
+
+        // Contact Page
+        'contact.title': 'Contact Info',
+        'contact.warning': 'Please check your spam folder if you don\'t see a response within a day.',
+        'contact.message1': 'Due to the heavy email volume, I cannot answer very basic husbandry, "what morph", and breeding questions from the general public anymore. I have provided many resources on my website, along with Google and YouTube having endless information available. There are also many Facebook groups to ask your question publicly. If you have thoroughly researched a question and cannot find an answer anywhere else then I can help.',
+        'contact.message2': 'Thanks for your understanding!',
+        'contact.message3': 'We are based out of Idaho and do not have a public storefront.',
+        'contact.geckoEating.title': 'If your gecko is not eating please see this page first:',
+        'contact.geckoEating.link': 'Gecko Not Eating Page',
+        'contact.email.label': 'Contact Email:',
+        'contact.email.link': 'info@papa-pharm-armenia.com',
+        'contact.email.note': 'Please check your spam folder for my reply.'
     },
 
     es: {
@@ -111,6 +131,7 @@ export const translations = {
         'nav.about': 'Acerca de',
         'nav.contact': 'Contacto',
         'nav.terms': 'Términos',
+        'nav.back': 'Atrás',
 
         // Common
         'common.search': 'Buscar',
@@ -125,6 +146,8 @@ export const translations = {
         // Home Page
         'home.title': 'Colección de Geckos Eublepharis',
         'home.subtitle': 'Gecos Leopardo y Morfos de Calidad Premium',
+        'home.gallery.title': 'Galería de Gecos',
+        'home.categories.title': 'Comprar por Categoría',
 
         // Available Page
         'available.title': 'Gecos Disponibles',
@@ -168,6 +191,7 @@ export const translations = {
         'empty.description': 'Intenta ajustar tus filtros',
 
         // About Page
+        'about.title': 'Acerca de Nosotros',
         'about.intro1': 'Un breve resumen de nuestra empresa, nuestro equipo de soporte y las organizaciones a las que pertenecemos.',
         'about.treeInitiative': 'Cada pedido que realice con nosotros planta un árbol nativo en Armenia, independientemente de lo que compre.',
         'about.history.title': 'Nuestra Historia',
@@ -198,13 +222,29 @@ export const translations = {
         'product.inquirySending': 'Enviando...',
         'product.inquiryCancel': 'Cancelar',
         'product.inquirySuccess': '¡Tu correo ha sido enviado! Por favor revisa tu cliente de correo.',
+        'product.notFound.title': 'Gecko No Encontrado',
+        'product.notFound.description': 'El gecko que estás buscando no existe.',
+        'product.notFound.goHome': 'Ir a Inicio',
+        'product.noDescription': 'No hay descripción disponible.',
 
         // Navigation
         'nav.backToCategories': 'Volver a Categorías',
 
         // Loader
         'loader.loadMore': 'Cargar Más Gecos',
-        'loader.endOfResults': '¡Has visto todos los gecos en esta categoría!'
+        'loader.endOfResults': '¡Has visto todos los gecos en esta categoría!',
+
+        // Contact Page
+        'contact.title': 'Información de Contacto',
+        'contact.warning': 'Por favor revise su carpeta de spam si no ve una respuesta en un día.',
+        'contact.message1': 'Debido al gran volumen de correos electrónicos, ya no puedo responder preguntas muy básicas sobre cría, "qué morfo" y reproducción del público en general. He proporcionado muchos recursos en mi sitio web, junto con Google y YouTube que tienen información infinita disponible. También hay muchos grupos de Facebook para hacer su pregunta públicamente. Si ha investigado a fondo una pregunta y no puede encontrar una respuesta en ningún otro lugar, entonces puedo ayudar.',
+        'contact.message2': '¡Gracias por su comprensión!',
+        'contact.message3': 'Estamos ubicados en Idaho y no tenemos una tienda pública.',
+        'contact.geckoEating.title': 'Si su gecko no está comiendo, consulte esta página primero:',
+        'contact.geckoEating.link': 'Página de Gecko que No Come',
+        'contact.email.label': 'Correo de Contacto:',
+        'contact.email.link': 'info@papa-pharm-armenia.com',
+        'contact.email.note': 'Por favor revise su carpeta de spam para mi respuesta.'
     },
 
     ru: {
@@ -215,6 +255,7 @@ export const translations = {
         'nav.about': 'О нас',
         'nav.contact': 'Контакты',
         'nav.terms': 'Условия',
+        'nav.back': 'Назад',
 
         // Common
         'common.search': 'Поиск',
@@ -229,6 +270,8 @@ export const translations = {
         // Home Page
         'home.title': 'Коллекция Гекконов Eublepharis',
         'home.subtitle': 'Качественные Гекконы-Леопарды и Морфы',
+        'home.gallery.title': 'Галерея Гекконов',
+        'home.categories.title': 'Покупка по Категориям',
 
         // Available Page
         'available.title': 'Доступные Гекконы',
@@ -272,6 +315,7 @@ export const translations = {
         'empty.description': 'Попробуйте изменить фильтры',
 
         // About Page
+        'about.title': 'О Нас',
         'about.intro1': 'Краткое описание нашей компании, нашей службы поддержки и организаций, в которых мы состоим.',
         'about.treeInitiative': 'Каждый заказ, который вы делаете у нас, способствует посадке одного местного дерева в Армении, независимо от того, что вы покупаете.',
         'about.history.title': 'Наша История',
@@ -302,13 +346,29 @@ export const translations = {
         'product.inquirySending': 'Отправка...',
         'product.inquiryCancel': 'Отмена',
         'product.inquirySuccess': 'Ваше письмо отправлено! Пожалуйста, проверьте ваш почтовый клиент.',
+        'product.notFound.title': 'Геккон Не Найден',
+        'product.notFound.description': 'Геккон, которого вы ищете, не существует.',
+        'product.notFound.goHome': 'На Главную',
+        'product.noDescription': 'Описание недоступно.',
 
         // Navigation
         'nav.backToCategories': 'Назад к Категориям',
 
         // Loader
         'loader.loadMore': 'Загрузить Больше Гекконов',
-        'loader.endOfResults': 'Вы видели всех гекконов в этой категории!'
+        'loader.endOfResults': 'Вы видели всех гекконов в этой категории!',
+
+        // Contact Page
+        'contact.title': 'Контактная Информация',
+        'contact.warning': 'Пожалуйста, проверьте папку спам, если вы не видите ответа в течение дня.',
+        'contact.message1': 'Из-за большого объема электронной почты я больше не могу отвечать на очень базовые вопросы о содержании, "какой морф" и разведении от широкой публики. Я предоставил много ресурсов на своем веб-сайте, а также Google и YouTube с бесконечной информацией. Также есть много групп Facebook, где можно задать вопрос публично. Если вы тщательно исследовали вопрос и не можете найти ответ нигде еще, то я могу помочь.',
+        'contact.message2': 'Спасибо за понимание!',
+        'contact.message3': 'Мы базируемся в Айдахо и не имеем публичного магазина.',
+        'contact.geckoEating.title': 'Если ваш геккон не ест, сначала посмотрите эту страницу:',
+        'contact.geckoEating.link': 'Страница Геккона, Который Не Ест',
+        'contact.email.label': 'Контактный Email:',
+        'contact.email.link': 'info@papa-pharm-armenia.com',
+        'contact.email.note': 'Пожалуйста, проверьте папку спам для моего ответа.'
     },
 
     hy: {
@@ -319,6 +379,7 @@ export const translations = {
         'nav.about': 'Մեր մասին',
         'nav.contact': 'Կոնտակտ',
         'nav.terms': 'Պայմաններ',
+        'nav.back': 'Հետ',
 
         // Common
         'common.search': 'Որոնել',
@@ -333,6 +394,8 @@ export const translations = {
         // Home Page
         'home.title': 'Eublepharis Գեկոնների Հավաքածու',
         'home.subtitle': 'Գերակա որակի ներառական մեխանիկներ & Մորֆեր',
+        'home.gallery.title': 'Գեկոների Պատկերասրահ',
+        'home.categories.title': 'Գնել Ըստ Կատեգորիայի',
 
         // Available Page
         'available.title': 'Առկա Գեկոններ',
@@ -376,6 +439,7 @@ export const translations = {
         'empty.description': 'Փորձեք փոխել ֆիլտրերը',
 
         // About Page
+        'about.title': 'Մեր Մասին',
         'about.intro1': 'Մեր ընկերության, աջակցության անձնակազմի և այն կազմակերպությունների համառոտ նկարագրությունը, որոնց մաս ենք կազմում:',
         'about.treeInitiative': 'Ներկայումս պատվերը, որը դուք կատարում եք մեզ մոտ, տնկում է մեկ բնիկ ծառ Հայաստանում, անկախ նրանից, թե ինչ եք գնում:',
         'about.history.title': 'Մեր Պատմությունը',
@@ -406,13 +470,29 @@ export const translations = {
         'product.inquirySending': 'Ուղարկվում է...',
         'product.inquiryCancel': 'Չեղարկել',
         'product.inquirySuccess': 'Ձեր նամակը ուղարկվեց! Խնդրում ենք ստուգել ձեր էլ. փոստի հաճախորդը:',
+        'product.notFound.title': 'Գեկոն Չի Գտնվել',
+        'product.notFound.description': 'Գեկոնը, որը դուք փնտրում եք, չի գոյություն ունենում:',
+        'product.notFound.goHome': 'Գնալ Գլխավոր էջ',
+        'product.noDescription': 'Նկարագրություն հասանելի չէ:',
 
         // Navigation
         'nav.backToCategories': 'Վերադառնալ Կատեգորիաներին',
 
         // Loader
         'loader.loadMore': 'Բեռնել Ավելին Գեկոններ',
-        'loader.endOfResults': 'Դուք տեսել եք բոլոր գեկոնները այս կատեգորիայում!'
+        'loader.endOfResults': 'Դուք տեսել եք բոլոր գեկոնները այս կատեգորիայում!',
+
+        // Contact Page
+        'contact.title': 'Կոնտակտային Տվյալներ',
+        'contact.warning': 'Խնդրում ենք ստուգել ձեր սպամի թղթապանակը, եթե 24 ժամվա ընթացքում պատասխան չեք ստանում:',
+        'contact.message1': 'Պայմանավորված նամակների ծավալը, ես այլևս չեմ կարող պատասխանել շատ հիմնական խնամքի, "ինչ մորֆ" և բազմացման հարցերին հանրության կողմից: Ես ներկայացրել եմ բազմաթիվ ռեսուրսներ իմ կայքում, նաև Google և YouTube-ում անսահման տեղեկատվություն կա: Նաև կան բազմաթիվ Facebook խմբեր, որտեղ կարող եք հարցը հարցադրել հանրությանը: Եթե դուք լավ ուսումնասիրել եք հարցը և ոչ մի տեղ պատասխան չեք գտնում, ապա ես կարող եմ օգնել:',
+        'contact.message2': 'Շնորհակալություն ձեր հասկացողության համար!',
+        'contact.message3': 'Մենք գտնվում ենք Այդահոյում և չունենք հանրային խանութ:',
+        'contact.geckoEating.title': 'Եթե ձեր գեկոնը չի ուտում, սկզբում տեսեք այս էջը:',
+        'contact.geckoEating.link': 'Գեկոն, Որ Չի Ուտում էջ',
+        'contact.email.label': 'Կոնտակտային էլ. փոստ:',
+        'contact.email.link': 'info@papa-pharm-armenia.com',
+        'contact.email.note': 'Խնդրում ենք ստուգել ձեր սպամի թղթապանակը իմ պատասխանի համար:'
     }
 };
 

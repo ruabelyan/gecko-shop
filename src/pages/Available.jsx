@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { API_BASE_URL } from '../config'
 import { useNavigate } from 'react-router-dom'
 import ProductGrid from '../components/ProductGrid'
 import { getAvailableGeckos, getCategories } from '../data/geckos'
@@ -18,7 +19,7 @@ function Available() {
 
     const fetchCategories = async () => {
         try {
-            const response = await fetch('http://localhost:5001/api/categories')
+            const response = await fetch(`${API_BASE_URL}/categories`)
             const data = await response.json()
             const cats = data.categories.filter(c => c.id !== 'all' && c.image)
             setCategories(cats)

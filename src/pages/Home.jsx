@@ -1,16 +1,20 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import ProductGrid from '../components/ProductGrid'
 import GeckoGallery from '../components/GeckoGallery'
 import Filter from '../components/Filter'
+import { SkeletonCard, SkeletonGrid } from '../components/Loader'
 import { useLanguage } from '../context/LanguageContext'
 import { getGeckos } from '../data/geckos'
+import { API_BASE_URL } from '../config'
 import '../assets/scss/pages/_available-grid.scss'
 
 function Home() {
     const [selectedCategory, setSelectedCategory] = useState('all')
     const [categories, setCategories] = useState([])
     const [allGeckos, setAllGeckos] = useState([])
+    const [loading, setLoading] = useState(true)
+    const [imagesLoading, setImagesLoading] = useState(true)
     const { t } = useLanguage()
     const navigate = useNavigate()
 
@@ -21,7 +25,7 @@ function Home() {
 
     const fetchCategories = async () => {
         try {
-            const response = await fetch('http://localhost:5001/api/categories')
+            const response = await fetch(`${API_BASE_URL}/categories`)
             const data = await response.json()
             const cats = data.categories.filter(c => c.id !== 'all' && c.image)
             setCategories(cats)
@@ -34,6 +38,8 @@ function Home() {
                 { id: 'hardwickii', name: 'E. hardwickii', image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=400&fit=crop' }
             ]
             setCategories(defaultCategories)
+        } finally {
+            setLoading(false)
         }
     }
 
@@ -41,8 +47,25 @@ function Home() {
         try {
             const data = await getGeckos('all', true)
             setAllGeckos(data)
+
+            // Wait for images to load
+            if (data.length > 0) {
+                await Promise.all(
+                    data.map(gecko => {
+                        if (!gecko.image) return Promise.resolve()
+                        return new Promise((resolve) => {
+                            const img = new Image()
+                            img.onload = resolve
+                            img.onerror = resolve
+                            img.src = gecko.image
+                        })
+                    })
+                )
+            }
+            setImagesLoading(false)
         } catch (error) {
             console.error('Error fetching geckos:', error)
+            setImagesLoading(false)
         }
     }
 
@@ -80,37 +103,51 @@ function Home() {
             </section>
 
             <div className="container">
-                <h2 className="section-title">Gecko Gallery</h2>
-                <GeckoGallery geckos={allGeckos} />
+                <h2 className="section-title">{t('home.gallery.title')}</h2>
+                {loading || imagesLoading ? (
+                    <SkeletonGrid count={15} small={true} />
+                ) : (
+                    <GeckoGallery geckos={allGeckos} />
+                )}
 
                 <div className="divider-section">
-                    <h2 className="section-title">Shop by Category</h2>
+                    <h2 className="section-title">{t('home.categories.title')}</h2>
                 </div>
 
-                <div className="category-grid">
-                    {categories.map((category) => (
-                        <div
-                            key={category.id}
-                            className="category-card"
-                            onClick={() => handleCategoryClick(category.id)}
-                        >
-                            <div className="category-image-wrapper">
-                                <img
-                                    src={category.image}
-                                    alt={category.name}
-                                    className="category-image"
-                                />
-                                <div className="geckoboa-logo">
-                                    <span className="logo-text">GECKO</span>
-                                    <span className="logo-icon">🦎</span>
+                {loading ? (
+                    <div className="category-grid">
+                        {Array.from({ length: 4 }).map((_, i) => (
+                            <div key={i} className="category-card skeleton">
+                                <SkeletonCard />
+                            </div>
+                        ))}
+                    </div>
+                ) : (
+                    <div className="category-grid">
+                        {categories.map((category) => (
+                            <div
+                                key={category.id}
+                                className="category-card"
+                                onClick={() => handleCategoryClick(category.id)}
+                            >
+                                <div className="category-image-wrapper">
+                                    <img
+                                        src={category.image}
+                                        alt={category.name}
+                                        className="category-image"
+                                    />
+                                    <div className="geckoboa-logo">
+                                        <span className="logo-text">GECKO</span>
+                                        <span className="logo-icon">🦎</span>
+                                    </div>
+                                </div>
+                                <div className="category-label">
+                                    {category.name}
                                 </div>
                             </div>
-                            <div className="category-label">
-                                {category.name}
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+                )}
 
             </div>
         </div>

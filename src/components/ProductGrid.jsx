@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import ProductCard from './ProductCard'
-import { SkeletonGrid, SkeletonCard } from './Loader'
+import { SkeletonGrid } from './Loader'
 import { useAnimatedLoader } from '../hooks/useAnimatedLoader'
 import { getGeckos, getGeckosCount } from '../data/geckos'
+import { useLanguage } from '../context/LanguageContext'
 
 function ProductGrid({ category, geckos: propGeckos }) {
     const [geckos, setGeckos] = useState([])
@@ -13,6 +14,7 @@ function ProductGrid({ category, geckos: propGeckos }) {
     const ITEMS_PER_PAGE = 6
     const observerTarget = useRef(null)
     const showLoader = useAnimatedLoader(loading, 200)
+    const { t } = useLanguage()
 
     // Check if using backward compatibility with propGeckos
     const isUsingProps = !!propGeckos

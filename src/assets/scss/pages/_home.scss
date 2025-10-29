@@ -54,6 +54,16 @@
         border: 2px solid transparent;
         box-shadow: $shadow-sm;
 
+        &.skeleton {
+            cursor: default;
+            
+            &:hover {
+                transform: none;
+                box-shadow: $shadow-sm;
+                border-color: transparent;
+            }
+        }
+
         &:hover {
             transform: translateY(-8px);
             box-shadow: $shadow-lg;
