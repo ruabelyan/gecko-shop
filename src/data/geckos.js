@@ -12,6 +12,7 @@ export let availableGeckos = [];
         const geckosData = await getGeckos();
         availableGeckos.length = 0;
         availableGeckos.push(...geckosData);
+        console.log('geckosData', geckosData)
 
         const categoriesData = await getCategories();
         categories.length = 0;
