@@ -65,7 +65,7 @@ export const getGeckoById = async (id) => {
 // Fetch all categories
 export const getCategories = async () => {
   try {
-    const response = await fetch(`${API_BASE_URL}/geckos/categories/all`);
+    const response = await fetch(`${API_BASE_URL}/categories`);
     if (!response.ok) throw new Error('Failed to fetch categories');
 
     const data = await response.json();
